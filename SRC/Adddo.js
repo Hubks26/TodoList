@@ -13,7 +13,7 @@ export default function Adddo({ submitHandler } ) {
     return (
       <ComponentContainer>
         <InputContainer>
-          <Input placeholder="Ajout d'une tache" onChangeText= 
+          <Input placeholder="Ajout d'une tache" onChangeText=
            {onChangeText} />
         </InputContainer>
         <SubmitButton

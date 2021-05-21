@@ -1,5 +1,5 @@
 import React from "react";
-import { View} from "react-native";
+import { View, Image} from "react-native";
 import styled from "styled-components";
 
 
@@ -11,6 +11,7 @@ export default function Liste({ item, deleteItem }) {
           <TextItem>{item.value}</TextItem>
         </View>
         <View onPress={() => deleteItem(item.key)}>
+          <Image source={require('../Ressource/logo-poubelle.png')} style={{ width: 30, height: 30, marginLeft: 275}} />
         </View>
       </ListContainer>
     </ComponentContainer>
