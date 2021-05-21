@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, StatusBar, FlatList, Text } from "react-native";
+import { View, StatusBar, FlatList, Text, ImageBackground } from "react-native";
 import Header from "./SRC/Header"
 import Liste from "./SRC/Liste"
 import Adddo from "./SRC/Adddo"
@@ -30,6 +30,14 @@ export default function App() {
 
   return (
        <Container1>
+         <ImageBackground 
+      style={{
+        flex: 1,
+        alignItems: "center",
+      }
+    }
+      source={require('./Ressource/todo.png')}>
+
          <View>
            <StatusBar barStyle="light-content" 
               backgroundColor="rgb(100,35,0)" />
@@ -49,6 +57,7 @@ export default function App() {
              <Liste item={item} deleteItem={deleteItem} />
              )}
            />
+           </ImageBackground> 
        </Container1>
        
        

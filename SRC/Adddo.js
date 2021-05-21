@@ -6,8 +6,7 @@ import styled from "styled-components";
 export default function Adddo({ submitHandler } ) {
     const [value, setValue] = useState("");
   
-    const onChangeText = (text) => {
-      setValue(text);
+    const onChangeText = (text) => {setValue(text)
     };
 
 
@@ -16,13 +15,13 @@ export default function Adddo({ submitHandler } ) {
         <InputContainer>
           <Input placeholder="Ajout d'une tache"  placeholderTextColor = "rgb(220,220,220)" onChangeText=
            {onChangeText} 
-           />
+            />
         </InputContainer>
         <SubmitButton
 
-         onPress={() => { if (value != ""){
-        setValue(submitHandler(value))};
-        }}
+         onPress={() => {
+        setValue(submitHandler(value))}
+        }
        >
 
           <Image source={require('../Ressource/+.png')} style={{ width: 30, height: 30, justifyContent: "center" }} />

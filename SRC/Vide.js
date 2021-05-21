@@ -5,8 +5,8 @@ import styled from "styled-components";
 export default function Vide() {
   return (
     <ComponentContainer>     
-
-<Image source={require('../Ressource/todoliste.png')} style={{ width: 500 , height: 500} }/>
+        <Image source={require('../Ressource/todoliste.png')} style={{ width: 500 , height: 500, flex: 1,
+        alignItems: "center"} }/>
     </ComponentContainer>
   );
 }
