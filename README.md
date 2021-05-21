@@ -12,7 +12,7 @@ $ npm install
 Ensuite, il vous suffit de rentrer dans deux differents terminaux: 
     
  ```sh
-$ npm start
+$ npm run start
 $ npm run android
 ```
 
