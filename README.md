@@ -5,18 +5,16 @@ Pour pouvoir utiliser cette application vous aurez besoin de `node` et `npm`
 
 pour lancer le programme il faut d'abbord s'assuré d'avoir installé le package avec : 
      
-     ```sh
-    $ npm install
-    ```
+```sh
+$ npm install
+```
     
 Ensuite, il vous suffit de rentrer dans deux differents terminaux: 
     
-    
-     ```sh
-    $ npm start
-
-    $ npm run android
-    ```
+ ```sh
+$ npm start
+$ npm run android
+```
 
 Vous aurez ensuite ceci, si tout ce passe bien : 
 
