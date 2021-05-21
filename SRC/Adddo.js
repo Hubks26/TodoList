@@ -9,21 +9,23 @@ export default function Adddo({ submitHandler } ) {
     const onChangeText = (text) => {
       setValue(text);
     };
-  
+
+
     return (
       <ComponentContainer>
         <InputContainer>
-          <Input placeholder="Ajout d'une tache" onChangeText=
-           {onChangeText} />
+          <Input placeholder="Ajout d'une tache"  placeholderTextColor = "rgb(220,220,220)" onChangeText=
+           {onChangeText} 
+           />
         </InputContainer>
         <SubmitButton
 
-         onPress={() => {
-           setValue(submitHandler(value));
-         }}
+         onPress={() => { if (value != ""){
+        setValue(submitHandler(value))};
+        }}
        >
 
-          <Image source={require('../Ressource/+.png')} style={{ width: 30, height: 30 }} />
+          <Image source={require('../Ressource/+.png')} style={{ width: 30, height: 30, justifyContent: "center" }} />
         </SubmitButton>
       </ComponentContainer>
       
@@ -42,7 +44,8 @@ export default function Adddo({ submitHandler } ) {
   `;
   
   const Input = styled.TextInput`
-    font-size: 20px;
+    color :  "rgb(220,220,220)";
+    font-size: 20px ;
     background-color: "rgb(28,28,28)";
     width: 300px;
     margin-right: 20px;
@@ -54,11 +57,11 @@ export default function Adddo({ submitHandler } ) {
   `;
   
   const SubmitButton = styled.TouchableOpacity`
-    width: 50px;
+     width: 50px;
     justify-content: center;
     align-items: center;
     background-color: "rgb(28,28,28)";
     margin-bottom: 20px;
-    border-radius: 50px;
-    margin-top : 10px;
+    border-radius: 15px;
+    margin-top : 20px;
   `;

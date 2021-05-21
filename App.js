@@ -4,6 +4,8 @@ import Header from "./SRC/Header"
 import Liste from "./SRC/Liste"
 import Adddo from "./SRC/Adddo"
 import Vide from "./SRC/Vide"
+import styled from "styled-components";
+
 
 export default function App() {
   const [data, setData] = useState([]);
@@ -12,24 +14,25 @@ export default function App() {
      return prevTodo.filter((todo) => todo.key != key);
    });
  };
-  const submitHandler = (value) => {
-   setData((prevTodo) => {
+ 
+ const submitHandler = (value) => {
+   setData((prevTodo) =>  {
      return [
        {
          value: value,
          key: Math.random().toString(),
        },
-       prevTodo,
+       ...prevTodo,
      ];
    });
- 
- 
  };
+ 
+
   return (
-       <View>
+       <Container1>
          <View>
            <StatusBar barStyle="light-content" 
-              backgroundColor="midnightblue" />
+              backgroundColor="rgb(100,35,0)" />
          </View>
  
          <View>
@@ -46,8 +49,13 @@ export default function App() {
              <Liste item={item} deleteItem={deleteItem} />
              )}
            />
-       </View>
- 
+       </Container1>
+       
+       
      );
  }
- 
+ const Container1 = styled.View`
+ background-color : "rgb(40,40,40)";
+ position: absolute
+ height: 100%
+`;

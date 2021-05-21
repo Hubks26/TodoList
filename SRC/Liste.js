@@ -6,39 +6,71 @@ import styled from "styled-components";
 export default function Liste({ item, deleteItem }) {
   return (
     <ComponentContainer>
-      <ListContainer>
-        <View>
-          <TextItem>{item.value}</TextItem>
-        </View>
-        <View onPress={() => deleteItem(item.key)}>
-          <Image source={require('../Ressource/logo-poubelle.png')} style={{ width: 30, height: 30, marginLeft: 275}} />
-        </View>
-      </ListContainer>
-    </ComponentContainer>
+    <Container1>
+    <TextItem>{item.value}</TextItem>
+    </Container1>
+
+    <DeleteButton
+
+        onPress = {() => deleteItem(item.key)}
+       >
+          <Image source={require('../Ressource/x.png')} style={{ width: 30, height: 30, justifyContent: "center"}} />
+    </DeleteButton>
+
+  </ComponentContainer>
   );
 }
 
-const ListContainer = styled.View`
-  color: "rgb(200,190,0)";
-  font-size: 15px;
-  margin: 10px;
-  padding: 15px 30px;
-  border: 2px solid ;
-  border-color:"rgb(200,190,0)";
-  border-radius: 5px;
-  flex-direction: row;
-  width: 350px;
-`;
-
 const ComponentContainer = styled.View`
-flex-direction: row;
-justify-content: center;
-height: auto;
-width: auto;
-`;
+    flex-direction: row;
+  `;
+  
+  const Container1 = styled.View`
+    flex-direction: row;
+    border-radius: 15px;
+    margin-top : 10px;
+  `;
+  
+  const Input = styled.TextInput`
+    font-size: 20px;
+    background-color: "rgba(28,28,28,0.5)";
+    width: 300px;
+    margin-right: 20px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-top : 10px;
+  `;
+  
+  const SubmitButton = styled.TouchableOpacity`
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+    background-color: "rgb(28,28,28)";
+    margin-bottom: 20px;
+    border-radius: 50px;
+    margin-top : 10px;
+  `;
 
 const TextItem = styled.Text`
-color: "rgb(200,190,0)";
-height: auto;
-font-size: 15px;
+    color: "rgb(200,190,0)";
+    font-size: 20px;
+    background-color: "rgba(28,28,28,0.5)";
+    width: 300px;
+    margin-right: 20px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+   margin-left: 20px;
+    margin-top : 10px;
 `;
+const DeleteButton = styled.TouchableOpacity`
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+    background-color: "rgba(28,28,28,.1)";
+    margin-bottom: 20px;
+    border-radius: 15px;
+    margin-top : 20px;
+  `;

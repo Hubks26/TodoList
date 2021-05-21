@@ -7,7 +7,7 @@ let today = new Date().toISOString().replace(/T.*/,'').split('-').reverse().join
 export default function Header() {
   return (
     <ComponentContainer>
-      <HeaderText>A faire.</HeaderText>
+      <HeaderText>Votre Liste.</HeaderText>
       <HeaderList>{today}</HeaderList>
     </ComponentContainer>
   );
@@ -28,7 +28,7 @@ const HeaderText = styled.Text`
 
 const HeaderList = styled.Text`
   color: "rgb(200,75,0)";
-
+  font-family: Roboto;
   font-size: 20px;
   margin-right: 20px;
 `;
