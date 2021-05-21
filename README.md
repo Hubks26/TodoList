@@ -18,4 +18,4 @@ $ npm run android
 
 Vous aurez ensuite ceci, si tout ce passe bien : 
 
-![logo app](https://github.com/Hubks26/TodoList/blob/main/exemple/acceuille.png)
+![acceuil](https://github.com/Hubks26/TodoList/blob/main/exemple/acceuil.jpg)
