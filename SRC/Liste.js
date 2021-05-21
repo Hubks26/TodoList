@@ -1,17 +1,43 @@
 import React from "react";
-import { View, Text} from "react-native";
+import { View} from "react-native";
+import styled from "styled-components";
 
 
 export default function Liste({ item, deleteItem }) {
   return (
-    <View>
-      <View>
+    <ComponentContainer>
+      <ListContainer>
         <View>
-          <Text>{item.value}</Text>
+          <TextItem>{item.value}</TextItem>
         </View>
         <View onPress={() => deleteItem(item.key)}>
         </View>
-      </View>
-    </View>
+      </ListContainer>
+    </ComponentContainer>
   );
 }
+
+const ListContainer = styled.View`
+  color: "rgb(200,190,0)";
+  font-size: 15px;
+  margin: 10px;
+  padding: 15px 30px;
+  border: 2px solid ;
+  border-color:"rgb(200,190,0)";
+  border-radius: 5px;
+  flex-direction: row;
+  width: 350px;
+`;
+
+const ComponentContainer = styled.View`
+flex-direction: row;
+justify-content: center;
+height: auto;
+width: auto;
+`;
+
+const TextItem = styled.Text`
+color: "rgb(200,190,0)";
+height: auto;
+font-size: 15px;
+`;
